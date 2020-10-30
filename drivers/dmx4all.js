@@ -26,7 +26,7 @@ function DMX4ALL(device_id, options) {
 }
 
 DMX4ALL.prototype.send_universe = function() {
-	if(!this.dev.writable) {
+	if(!this.dev.isOpen()) {
 		return
 	}
 

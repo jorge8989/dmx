@@ -37,7 +37,7 @@ function DMXKingUltraDMXPro(device_id, options) {
 }
 
 DMXKingUltraDMXPro.prototype.send_universe = function() {
-	if(!this.dev.writable) {
+	if(!this.dev.isOpen()) {
 		return
 	}
 	var hdr = Buffer([
